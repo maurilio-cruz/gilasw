@@ -1,0 +1,57 @@
+
+<button class="btn-success btn-block" type="button" {{on 'click' this.agregarVehiculo}}>
+    Agregar vehiculo
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="vehiculoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar vehículo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" {{on 'click' this.closeModal}}>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+            <div class="form-group">
+                <label for="tipoFormControlSelect">Tipo vehículo</label>
+                <select class="form-control" id="tipoFormControlSelect">
+                    <option value=null></option>
+                    <option value='SEDAN'>Sedan</option>
+                    <option value='MOTOCICLETA'>Motocicleta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="potenciaMotorFormControlText">Potencia de motor (HP)</label>
+                <input type="number" class="form-control" id="potenciaMotorFormControlText" min="1" max="10000">
+            </div>
+
+            {{#if this.hasError}}
+
+              <div class="form-group">
+                  <br/>
+                  <div class="alert alert-warning" role="alert">
+                    ¡Es requerido capturar todos los datos correctamente!
+                  </div>
+              </div>
+
+            {{/if}}
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" {{on 'click' this.closeModal}}>
+            Cancelar
+        </button>
+        <button type="button" class="btn btn-success" {{on 'click' this.sendForm}}>
+            Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{yield}}
