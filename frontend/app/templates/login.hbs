@@ -88,17 +88,15 @@
                 <div class="container">
                   <label for="username"><b>Username</b></label>
                   <input type="text" name="username" required>
-
                   <label for="password"><b>Contraseña</b></label>
                   <input type="password" name="password" required>
-
                 </div>
-                
+               
               </form>
 
               <div>&nbsp;</div>
               
-              <button onclick="dologin()">Login</button>
+                <button onclick="dologin()">Login</button>
 
             </div>
 
@@ -129,14 +127,13 @@
       url:  'http://localhost:8080/index.php/gilasw/autenticacion/login',
       data: params,
       success: function (response) {
+
         var data = JSON.parse(response);
-        
-        console.dir( data );
-        /*
+       
         if (data.success == true) {
           window.location.href = data.redirect;
         }
-        */
+        
       },
     });
 

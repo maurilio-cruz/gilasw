@@ -10,22 +10,14 @@ class PublicAPI extends Controller{
         $this->bi = new \App\Libraries\Gilasw\VehiculoBI();
     }
 
-    public function sanitizeInt( $value = null ){
-        $new_value = filter_var( $value, FILTER_SANITIZE_NUMBER_INT );
-        return $new_value;
-    }
-
     private function validateCredentials(){
-
         if( !isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) ){
             return false;
         }
-
         if( $_SERVER['PHP_AUTH_USER'] !== 'administrador' && $_SERVER['PHP_AUTH_PW'] !== 'gilasw'){
             return false;
         }
         return true;
-                
     }
 
     public function listarvehiculos(){
@@ -44,10 +36,12 @@ class PublicAPI extends Controller{
 
     }
 
+    public function sanitizeInt( $value = null ){
+        $new_value = filter_var( $value, FILTER_SANITIZE_NUMBER_INT );
+        return $new_value;
+    }
 
     public function agregarvehiculo(){
-
-        /*
 
         if( $this->validateCredentials() === false ){
             header('WWW-Authenticate: Basic realm="Public API"');
@@ -55,8 +49,6 @@ class PublicAPI extends Controller{
             die('Credenciales incorrectas');
             exit;
         }
-
-        */
 
         $tipo_vehiculo = $this->request->getPost('tipo_vehiculo');
         $potencia_motor= $this->sanitizeInt( $this->request->getPost('potencia_motor') );

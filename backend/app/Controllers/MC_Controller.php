@@ -10,11 +10,13 @@ class MC_Controller extends Controller{
 
     public function __construct(){
 
+        return;
+
         $this->session = session();
-       
+    
         if( !isset($_SESSION['isLoggedIn']) ){
-                echo $this->getSuccess( (object) array( 'fatal' => 'session no iniciada' ), false );
-                exit;
+            echo $this->getSuccess( (object) array( 'fatal' => 'session no iniciada' ), false );
+            exit;
         }
 
         if( $_SESSION['isLoggedIn'] == false ){
@@ -45,11 +47,8 @@ class MC_Controller extends Controller{
      */
 
     public function sanitizeInt( $value = null ){
-
         $new_value = filter_var( $value, FILTER_SANITIZE_NUMBER_INT );
-
         return $new_value;
-        
     }
 
 }
