@@ -117,6 +117,12 @@ El documento guia-gilasw.pdf muestra de manera muy breve el alcance general del 
 
         Basic Auth
 
+    
+    las credenciales son:
+
+            username:   administrador
+            contraseña: gilasw
+
 
     Para el servicio de agregar vehiculo se utilizan dos variables en POST:
 
