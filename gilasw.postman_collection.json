@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "774a4043-fefc-464b-8a81-ede96947e105",
+		"name": "gilasw",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listado de registros de Vehículos.",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "gilasw",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "administrador",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/index.php/gilasw/publicAPI/listarvehiculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"index.php",
+						"gilasw",
+						"publicAPI",
+						"listarvehiculos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 401 Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/listarvehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"listarvehiculos"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 18:14:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Basic realm=\"Public API\""
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Credenciales incorrectas"
+				},
+				{
+					"name": "Responde Incorrected Credentials",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/listarvehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"listarvehiculos"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 18:16:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Basic realm=\"Public API\""
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Credenciales incorrectas"
+				},
+				{
+					"name": "Response 200 OK - Valid Credentials",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/listarvehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"listarvehiculos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 18:17:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"numFilas\":19,\"data\":[{\"vehiculo_k\":\"1\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"2\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"2\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"100\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"3\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"15000\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"4\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"1500\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"5\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"100\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"6\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"100\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"7\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"150\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"8\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"100\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"9\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"100\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"10\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"200\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"11\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"2\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"12\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"152\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"13\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"140\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"14\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"300\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"15\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"2\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"16\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"200\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"17\",\"tipo_vehiculo\":\"SEDAN\",\"numero_llantas\":\"4\",\"potencia_motor\":\"1230\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"18\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"200\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null},{\"vehiculo_k\":\"19\",\"tipo_vehiculo\":\"MOTOCICLETA\",\"numero_llantas\":\"2\",\"potencia_motor\":\"150\",\"activo\":\"1\",\"usuario_creacion\":\"0\",\"fecha_hora_creacion\":null,\"usuario_modificacion\":null,\"fecha_hora_modificacion\":null,\"usuario_eliminacion\":null,\"fecha_hora_eliminacion\":null}]}"
+				}
+			]
+		},
+		{
+			"name": "Agregar nuevo vehiculo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tipo_vehiculo",
+							"value": "MOTOCICLETA",
+							"type": "text"
+						},
+						{
+							"key": "potencia_motor",
+							"value": "1200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"index.php",
+						"gilasw",
+						"publicAPI",
+						"agregarvehiculo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response 401 Unauthorised",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"agregarvehiculo"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 23:12:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Basic realm=\"Public API\""
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Credenciales incorrectas"
+				},
+				{
+					"name": "Response Incorrected Credential",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"agregarvehiculo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 23:13:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Información invalida"
+				},
+				{
+					"name": "Response Incorrected Credentials",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"agregarvehiculo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Jan 2022 23:13:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Información invalida"
+				},
+				{
+					"name": "Agregar nuevo vehiculo SEDAN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipo_vehiculo",
+									"value": "SEDAN",
+									"type": "text"
+								},
+								{
+									"key": "potencia_motor",
+									"value": "500",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"agregarvehiculo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jan 2022 00:21:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":true,\"data\":{\"vehiculo_k\":22}}"
+				},
+				{
+					"name": "Agregar nuevo vehiculo MOTOCICLETA",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tipo_vehiculo",
+									"value": "MOTOCICLETA",
+									"type": "text"
+								},
+								{
+									"key": "potencia_motor",
+									"value": "1200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/index.php/gilasw/publicAPI/agregarvehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"index.php",
+								"gilasw",
+								"publicAPI",
+								"agregarvehiculo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Jan 2022 00:22:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":true,\"data\":{\"vehiculo_k\":23}}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}

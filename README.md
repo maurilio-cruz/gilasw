@@ -140,4 +140,6 @@ El documento guia-gilasw.pdf muestra de manera muy breve el alcance general del 
 
                 potencia motor acepta valores numericos.
 
+    De manera complementaria el archivo gilasw.postman_collection.json contiene la colección de request http a la api publica. Para consultarlo solamente hay que importarlo en POSTMAN.
+
 
